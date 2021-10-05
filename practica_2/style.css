@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
 }
-
 body {
 	background: 
 	  radial-gradient(black 3px, transparent 4px),
@@ -14,7 +13,7 @@ body {
 	background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
 	background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
 	font-family: 'Manjari', sans-serif;
-  }
+}
 .title h1{
 	padding: 20px 0;
 	text-align: center;
@@ -26,12 +25,9 @@ body {
 	width: 90%;
 	max-width: 1000px;
 	margin: 0 auto;
-	/*ASI SE COMIENZA EL GRID*/
-	display: grid;
-	/*ESTO ES PARECIDO A UN PADDIN O MARGIN ENTRE COLUMNAS*/
-	gap: 1.6em;
-	/* REPITE UNA FRACCION 5 VECES. HACE 5 COLUMNAS */
-	grid-template-columns: repeat( 5, 1fr); 
+	display: grid; /*ASI SE COMIENZA EL GRID*/
+	gap: 1.6em; /*ESTO ES PARECIDO A UN PADDIN O MARGIN ENTRE COLUMNAS*/
+	grid-template-columns: repeat( 5, 1fr); /* REPITE UNA FRACCION 5 VECES. HACE 5 COLUMNAS */
 }
 .container > .header,
 .container > .content,
@@ -47,14 +43,10 @@ body {
 .container  .footer{
 	background-color: #1e272e;
 	color: #ffffff;
-	/*HACE 	QUE EL HEADER Y EL FOOTER FULL 
-	QUE ESTEN DESDE LA CULUNA 1 HASTA LA 6*/
-	grid-column: 1/6;
+	grid-column: 1/6; /*HACE QUE EL HEADER Y EL FOOTER FULL  QUE ESTEN DESDE LA CULUNA 1 HASTA LA 6*/
 }
 .container .content{
-	/*SPAN DEFINE EL NUMERO DE COLUMNAS DE 
-	UN ELEMENTO GRID*/
-	grid-column: span 3;
+	grid-column: span 3; /*SPAN DEFINE EL NUMERO DE COLUMNAS DE  UN ELEMENTO GRID*/
 }
 .content > .article{
 	background-color: #808e9b;
@@ -67,19 +59,13 @@ body {
 	padding: 10px;
 }
 .container .sidebar{
-	/*EL SIDE BAR TIENE DE ANCHO DE 2 COLUMNAS */
-	grid-column: span 2;
+	grid-column: span 2; /*EL SIDE BAR TIENE DE ANCHO DE 2 COLUMNAS */
 	background-color: #485460;
 	color: #fff;
-	/*AQUI SE USA FLEX BOX*/
-	display: flex;
-	/*CENTRAMO DE MANERDA VERTICAL Y HORIZONTAL
-	 PERO SE ORDENAN HORIZONTALMENT*/
-	justify-content: center;
+	display: flex; /*AQUI SE USA FLEX BOX*/
+	justify-content: center; /*CENTRAMO DE MANERDA VERTICAL Y HORIZONTAL PERO SE ORDENAN HORIZONTALMENT*/
 	align-items: center;
-	/*Y SE SOLUCIONA CON COLUMN PARA QUE 
-	SEAN VERTICALES */
-	flex-direction: column;
+	flex-direction: column; /*Y SE SOLUCIONA CON COLUMN PARA QUE  SEAN VERTICALES */
 }
 .container .sidebar img{
 	width: 100%;
@@ -92,8 +78,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	/*HACE QUE LA ANIMACION DEL HOVER SEA MAS LENTA*/
-	transition: all 0.9s ease;
+	transition: all 0.9s ease; /*HACE QUE LA ANIMACION DEL HOVER SEA MAS LENTA*/
 }
 .container > .related-post:hover{
 	cursor: pointer;
@@ -105,12 +90,10 @@ body {
 		text-align: center;
 	}	
 	.container .content{
-		/*ABARCA DE LA COLUM 1 A LA ULTIMA*/
-		grid-column: 1 / -1;
+		grid-column: 1 / -1; /*ABARCA DE LA COLUM 1 A LA ULTIMA*/
 	}
 	.container .sidebar{
-		/*ABARCA DE LA COLUMN 1 A LA 6 QUE ES LA ULTIMA*/
-		grid-column: 1 / 6;
+		grid-column: 1 / 6; /*ABARCA DE LA COLUMN 1 A LA 6 QUE ES LA ULTIMA*/
 	}
 	.container .related-post{
 		grid-column:  1 / -1;
